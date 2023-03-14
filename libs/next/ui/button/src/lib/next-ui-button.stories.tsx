@@ -9,8 +9,8 @@ export default Story;
 
 export const Primary = {
   args: {
-    text: '',
-    color: '',
+    text: 'Click me',
+    color: '#ddffdd66',
     disabled: false,
   },
 };

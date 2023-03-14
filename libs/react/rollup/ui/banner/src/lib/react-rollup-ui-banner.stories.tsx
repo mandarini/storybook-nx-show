@@ -9,11 +9,11 @@ export default Story;
 
 export const Primary = {
   args: {
-    backgroundColor: '',
-    borderColor: '',
-    text: '',
-    borderWidth: 0,
-    width: 0,
-    height: 0,
+    backgroundColor: '#ff00ff88',
+    borderColor: '#ff00ff',
+    text: 'Click me!',
+    borderWidth: 3,
+    width: 350,
+    height: 50,
   },
 };

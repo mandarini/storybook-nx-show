@@ -12,7 +12,7 @@ export const Primary = {
   }),
   args: {
     text: 'Click me',
-    color: '#ddffdd',
+    color: '#ddffdd66',
     disabled: false,
   },
 };
