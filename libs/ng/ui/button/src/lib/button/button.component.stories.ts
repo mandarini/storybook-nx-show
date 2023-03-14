@@ -16,3 +16,14 @@ export const Primary = {
     disabled: false,
   },
 };
+
+export const Disabled = {
+  render: (args: ButtonComponent) => ({
+    props: args,
+  }),
+  args: {
+    text: 'Nope',
+    color: '#ff000099',
+    disabled: true,
+  },
+};

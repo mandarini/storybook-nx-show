@@ -14,3 +14,11 @@ export const Primary = {
     disabled: false,
   },
 };
+
+export const Disabled = {
+  args: {
+    text: 'Nope',
+    color: '#ff000099',
+    disabled: true,
+  },
+};
