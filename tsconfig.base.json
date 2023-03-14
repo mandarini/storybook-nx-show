@@ -30,6 +30,13 @@
       ],
       "@storybook-nx-show/react/vite/ui/button": [
         "libs/react/vite/ui/button/src/index.ts"
+      ],
+      "@storybook-nx-show/storybook-ng": ["libs/storybook-ng/src/index.ts"],
+      "@storybook-nx-show/storybook-react-vite": [
+        "libs/storybook-react-vite/src/index.ts"
+      ],
+      "@storybook-nx-show/storybook-react-webpack": [
+        "libs/storybook-react-webpack/src/index.ts"
       ]
     }
   },
