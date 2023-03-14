@@ -1,0 +1,77 @@
+{
+  "name": "web-webpack-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/web-webpack-app/src",
+  "tags": ["wc", "webpack", "app"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/web-webpack-app",
+        "compiler": "babel",
+        "main": "apps/web-webpack-app/src/main.ts",
+        "tsConfig": "apps/web-webpack-app/tsconfig.app.json",
+        "webpackConfig": "apps/web-webpack-app/webpack.config.js",
+        "assets": [
+          "apps/web-webpack-app/src/favicon.ico",
+          "apps/web-webpack-app/src/assets"
+        ],
+        "index": "apps/web-webpack-app/src/index.html",
+        "baseHref": "/",
+        "styles": ["apps/web-webpack-app/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/web-webpack-app/src/environments/environment.ts",
+              "with": "apps/web-webpack-app/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "options": {
+        "buildTarget": "web-webpack-app:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "web-webpack-app:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-webpack-app/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/web-webpack-app/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  }
+}
