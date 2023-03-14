@@ -50,8 +50,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/react/rollup/ui/banner/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "libs/react/rollup/ui/banner/.storybook"
       },
       "configurations": {
         "ci": {
@@ -64,8 +63,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/react-rollup-ui-banner",
-        "configDir": "libs/react/rollup/ui/banner/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "libs/react/rollup/ui/banner/.storybook"
       },
       "configurations": {
         "ci": {

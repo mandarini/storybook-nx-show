@@ -50,8 +50,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/next/ui/button/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "libs/next/ui/button/.storybook"
       },
       "configurations": {
         "ci": {
@@ -64,8 +63,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/next-ui-button",
-        "configDir": "libs/next/ui/button/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "libs/next/ui/button/.storybook"
       },
       "configurations": {
         "ci": {

@@ -89,8 +89,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "apps/react-app-wp/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "apps/react-app-wp/.storybook"
       },
       "configurations": {
         "ci": {
@@ -103,8 +102,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/react-app-wp",
-        "configDir": "apps/react-app-wp/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "apps/react-app-wp/.storybook"
       },
       "configurations": {
         "ci": {

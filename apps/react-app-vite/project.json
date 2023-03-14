@@ -71,8 +71,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "apps/react-app-vite/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "apps/react-app-vite/.storybook"
       },
       "configurations": {
         "ci": {
@@ -85,8 +84,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/react-app-vite",
-        "configDir": "apps/react-app-vite/.storybook",
-        "uiFramework": "@storybook/react"
+        "configDir": "apps/react-app-vite/.storybook"
       },
       "configurations": {
         "ci": {

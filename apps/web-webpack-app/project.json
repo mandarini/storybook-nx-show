@@ -77,8 +77,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "port": 4400,
-        "configDir": "apps/web-webpack-app/.storybook",
-        "uiFramework": "@storybook/web-components"
+        "configDir": "apps/web-webpack-app/.storybook"
       },
       "configurations": {
         "ci": {
@@ -91,8 +90,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/web-webpack-app",
-        "configDir": "apps/web-webpack-app/.storybook",
-        "uiFramework": "@storybook/web-components"
+        "configDir": "apps/web-webpack-app/.storybook"
       },
       "configurations": {
         "ci": {

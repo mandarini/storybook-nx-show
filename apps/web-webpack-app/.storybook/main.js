@@ -1,10 +1,13 @@
 module.exports = {
-  core: { builder: 'webpack5' },
-  stories: [
-    '../src/app/**/*.stories.mdx',
-    '../src/app/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
-  addons: ['@storybook/addon-essentials'],
+  stories: ['../src/app/**/*.mdx', '../src/app/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-mdx-gfm'],
+  framework: {
+    name: '@storybook/web-components-webpack5',
+    options: {}
+  },
+  docs: {
+    autodocs: true
+  }
 };
 
 // To customize your webpack configuration you can use the webpackFinal field.
