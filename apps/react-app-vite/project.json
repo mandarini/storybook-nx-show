@@ -1,0 +1,72 @@
+{
+  "name": "react-app-vite",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-app-vite/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/react-app-vite"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-app-vite:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-app-vite:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "react-app-vite:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nrwl/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-app-vite:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-app-vite:build:development"
+        },
+        "production": {
+          "buildTarget": "react-app-vite:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/apps/react-app-vite"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/react-app-vite"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-app-vite/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": ["apps", "react", "vite"]
+}
