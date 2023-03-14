@@ -1,14 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { ReactViteUiButton } from '@storybook-nx-show/react/vite/ui/button';
+import { ReactViteUiBanner } from '@storybook-nx-show/react/vite/ui/banner';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="react-app-vite" />
+      <ReactViteUiBanner
+        backgroundColor="#FF00FF66"
+        text="This is a banner"
+        borderColor="#f3f3f3"
+        width={350}
+        height={50}
+        borderWidth={2}
+      />
 
-      <div />
+      <ReactViteUiButton text="Click me" color="#f300fe" disabled={false} />
     </>
   );
 }

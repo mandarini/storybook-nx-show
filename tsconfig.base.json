@@ -14,7 +14,24 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@storybook-nx-show/next/ui/banner": ["libs/next/ui/banner/src/index.ts"],
+      "@storybook-nx-show/next/ui/button": ["libs/next/ui/button/src/index.ts"],
+      "@storybook-nx-show/ng/ui/banner": ["libs/ng/ui/banner/src/index.ts"],
+      "@storybook-nx-show/ng/ui/button": ["libs/ng/ui/button/src/index.ts"],
+      "@storybook-nx-show/react/rollup/ui/banner": [
+        "libs/react/rollup/ui/banner/src/index.ts"
+      ],
+      "@storybook-nx-show/react/rollup/ui/button": [
+        "libs/react/rollup/ui/button/src/index.ts"
+      ],
+      "@storybook-nx-show/react/vite/ui/banner": [
+        "libs/react/vite/ui/banner/src/index.ts"
+      ],
+      "@storybook-nx-show/react/vite/ui/button": [
+        "libs/react/vite/ui/button/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
